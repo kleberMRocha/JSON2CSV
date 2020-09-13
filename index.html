@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assests/css/style.css">
+    <title>CSV2JSON</title>
+</head>
+<body>
+    <Header><h1>CSV2JSON</h1></Header>
+    <div id="error"></div>
+    <div class="container">
+        <main>
+            <div class="jsonContainer">
+                <textarea class="inputArea" id="inputArea" rows="20"></textarea>
+                <div>
+                    <button id="btnCsv">2CSV</button> 
+                    <button id="btnJson">2JSON</button>
+                    <button id="clean">CLEAN</button>
+                </div>
+            </div>
+
+            <div class="csvContainer">
+                <textarea class="outputArea" disabled id="outputArea" rows="20"></textarea>
+                <div>
+                    <button><i class="fas fa-download"></i></button> 
+                    <button id="copy"><i class="far fa-copy"></i></button> 
+                </div>
+            </div>
+        </main>
+    </div>
+<script src="assests/js/index.js"></script>
+<script src="assests/js/2JSON/index.js"></script>
+<script src="assests/js/CopyContent/index.js"></script>
+<script src="https://kit.fontawesome.com/703a4c0f87.js" crossorigin="anonymous"></script>    
+</body>
+</html>
