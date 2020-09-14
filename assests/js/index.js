@@ -3,7 +3,11 @@ const outputArea = document.querySelector('#outputArea');
 const cleanBtn = document.querySelector('#clean');
 const btnCopy = document.querySelector('#copy');
 const btnJson = document.querySelector('#btnJson');
+const btncsv = document.querySelector('#btncsv');
 const msgError = document.querySelector('#error');
+const download = document.querySelector('#download');
+
+let file = '';
 
 //RegExp
 const lineBreak = /\r?\n|\r/gmi;

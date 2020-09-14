@@ -93,6 +93,7 @@ h1{
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    height: 100vh;
   }
   @media (min-width: 768px) {
     .container {
@@ -111,6 +112,7 @@ h1{
   }
 
   button{
+      position: relative;
       margin-top: 25px;
       width: 80px;
       border: none;
@@ -153,4 +155,29 @@ h1{
     opacity: .9;
     animation: fadeIn .5s ease-in-out;
 }
- 
+
+.copyToClipboard{
+    background-color: yellowgreen;
+}
+
+.helpText{
+  opacity: 0;
+  position: absolute;
+  background-color:orange ;
+  bottom: 0;
+  left: 0;
+  margin-bottom: -20px;
+  width: 100%;
+}
+
+
+footer{
+    color:white;
+    text-align: center;
+    background-color: cornflowerblue;
+    padding: 1rem;
+}
+footer a{
+    color: inherit;
+  
+}
