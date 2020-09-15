@@ -1,6 +1,6 @@
 # JSON2CSV
 
-<a href="https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/JSON2CSV-App.md">App-ideas</a>
+<a href="https://github.com/florinpop17/app-ideas">App-ideas</a>
 
 **Tier:** 1-Beginner
 
