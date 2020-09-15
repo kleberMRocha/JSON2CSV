@@ -6,13 +6,15 @@ const btnJson = document.querySelector('#btnJson');
 const btncsv = document.querySelector('#btncsv');
 const msgError = document.querySelector('#error');
 const download = document.querySelector('#download');
+const fileInp = document.querySelector('#fileUp');
+const btnSubFile = document.querySelector('#upload');
 
 let file = '';
 
 //RegExp
 const lineBreak = /\r?\n|\r/gmi;
-const removeDq = /["']/gmi;
-const csvSeparator = /[;,]/gmi;
+const removeDq = /"/gm;
+const csvSeparator = /".*"|[^,"\s]+/gmi;
 
 cleanBtn.addEventListener('click',()=>{
   inputArea.value = '';

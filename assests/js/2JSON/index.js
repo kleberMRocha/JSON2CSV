@@ -1,35 +1,38 @@
 
 btnJson.addEventListener('click', ()=>{
 
-    file = 'file.json';
+(!inputArea.value) && setError('The field cannot be empty!');
+file = 'file.json';
 
-    (!inputArea.value) && setError('The field cannot be empty!');
-    
-    let removeDoubleQuotes = inputArea.value.replace(removeDq,'');
-    let separatedbyLinebreak = removeDoubleQuotes.trim().split(/\n/);
-    let jsonContent = [];
-    let keys = [];
-    
-    separatedbyLinebreak[0].split(csvSeparator).forEach(key => keys.push(key));
-    separatedbyLinebreak.shift();
-    
-    
-    separatedbyLinebreak.map(value =>{
-        let obj = {};
-    
-        value.split(csvSeparator).forEach((value,index)=>{
-            obj[`${keys[index]}`] = value
-        })
+let lines = inputArea.value.trim().split('\n');
+let jsonKeys = lines[0].replace(/["]/gi,'').split(',');
+let jsonValues = [];
 
-        return jsonContent.push(obj);
+
+lines.shift()
+
+lines.forEach(element => {
+    jsonValues.push(element.match(csvSeparator));
+});
+
+
+let finalJason = [];
+
+console.log(jsonValues)
+
+jsonValues.map((value) =>{
+    let obj ={};
+    value.forEach((value,index) =>{
+        (obj[jsonKeys[index]] = value.replace(/"/gm,""))
+
     });
-    
-    
-    (jsonContent.length === 0) && setError('Invalid content!');
-    outputArea.value = JSON.stringify(jsonContent);
-    
-    
-    });
+    finalJason.push(obj);  
+});
+
+outputArea.value = (JSON.stringify(finalJason).replace(/[\/\\]/gm," "));
+
+
+});
     
  
     
